@@ -18,7 +18,7 @@ Details and evidence for each fix: [audits/2026-11-14/fixes.en.md](audits/2026-1
 | | Finding | Status |
 |---|---|---|
 | H1 | The published data lets anyone work out which account the collector node belongs to | **Fixed** on 14 Nov 2026 for all new publications. The earlier files stay in the data repository's public history and cannot be removed. |
-| H2 | Anyone able to write to the data repository could run code on the machine that hosts the validator | **Fixed** on 14 Nov 2026; the main branch is now protected against history rewrites. Still open: limiting the GitHub credential to this one repository. |
+| H2 | Anyone able to write to the data repository could run code on the machine that hosts the validator | **Fixed** on 14 Nov 2026. The main branch is protected against history rewrites, and the collector now publishes with a credential limited to this one repository. |
 | H3 | The App Store listing has no link to the Terms of Use | **Fixed in the listing** on 14 Nov 2026: the App Store description now carries the Terms of Use and Privacy Policy links in all 13 languages. It becomes visible to the public when Apple approves version 1.0. |
 | H4 | The Android app has no privacy policy link, and its Terms link leads to Google's terms | **Fix written, not yet released.** In Android version 4, built and held until Google finishes reviewing the first version and the terms and support pages are published. |
 

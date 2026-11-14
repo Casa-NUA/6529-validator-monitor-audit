@@ -28,7 +28,7 @@ Mais tarde no mesmo dia: a branch principal do repositório de dados foi protegi
 O que continua aberto aqui:
 
 - Os arquivos anteriores continuam no histórico público do repositório.
-- A credencial do GitHub usada para publicar ainda não está limitada a esse único repositório.
+- (Fechado mais tarde em 14 nov. 2026: o coletor agora publica com uma credencial do GitHub que só pode escrever nesse único repositório.)
 - Uma assinatura válida mostra quem publicou um arquivo, não que ele é recente: quem conseguisse alterar arquivos no GitHub poderia recolocar um arquivo assinado mais antigo. Os apps conferem o dia dentro de cada arquivo e a hora da coleta.
 - A chave de assinatura fica na máquina coletora. A assinatura protege contra alterações feitas no GitHub, não contra a tomada dessa máquina.
 

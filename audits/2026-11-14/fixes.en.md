@@ -28,7 +28,7 @@ Later the same day: the main branch of the data repository was protected against
 What is still open here:
 
 - The earlier files stay in the repository's public history.
-- The GitHub credential used for publishing is not yet limited to this one repository.
+- (Closed later on 14 Nov 2026: the collector now publishes with a GitHub credential that can write only to this one repository.)
 - A valid signature shows who published a file, not that it is recent: someone able to change files on GitHub could put back an older signed file. The apps check the day inside each file and the collection time.
 - The signing key is on the collecting machine. Signing protects against changes made on GitHub, not against that machine being taken over.
 

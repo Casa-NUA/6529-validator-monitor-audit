@@ -18,7 +18,7 @@ Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audit
 | | Achado | Situação |
 |---|---|---|
 | A1 | Os dados publicados permitem descobrir a qual conta pertence o nó coletor | **Corrigido** em 14 nov. 2026 para todas as novas publicações. Os arquivos anteriores continuam no histórico público do repositório de dados e não podem ser removidos. |
-| A2 | Quem conseguir escrever no repositório de dados poderia executar código na máquina que hospeda o validador | **Corrigido** em 14 nov. 2026; a branch principal agora está protegida contra reescrita de histórico. Ainda aberto: limitar a credencial do GitHub a esse único repositório. |
+| A2 | Quem conseguir escrever no repositório de dados poderia executar código na máquina que hospeda o validador | **Corrigido** em 14 nov. 2026. A branch principal está protegida contra reescrita de histórico, e o coletor agora publica com uma credencial limitada a esse único repositório. |
 | A3 | A página do app na App Store não tem link para os Termos de Uso | **Corrigido na página da loja** em 14 nov. 2026: a descrição na App Store agora traz os links dos Termos de Uso e da Política de Privacidade nos 13 idiomas. Ela fica visível ao público quando a Apple aprovar a versão 1.0. |
 | A4 | O app do Android não tem link para a política de privacidade, e o link de Termos leva aos termos do Google | **Correção escrita, ainda não lançada.** Está na versão 4 do Android, gerada e guardada até o Google terminar de revisar a primeira versão e as páginas de termos e de suporte serem publicadas. |
 
