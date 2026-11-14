@@ -23,17 +23,24 @@ Como foi conferido:
 - **Testado de ponta a ponta** numa cópia isolada, com uma chave descartável: publicação normal, segunda execução sem commit desnecessário, recusa de rodar de dentro do repositório, arquivo plantado não assinado e removido, link plantado recusado, chave ausente recusada e os 11 envelopes publicados conferindo com a chave pública.
 - **Conferido no ar** depois da ativação: os arquivos assinados estão sendo servidos, e os arquivos de ciclo não trazem mais as duas listas.
 
+Mais tarde no mesmo dia: a branch principal do repositório de dados foi protegida contra reescrita de histórico e exclusão (uma regra do GitHub sem exceções), e a chave reserva de assinatura saiu da máquina coletora.
+
 O que continua aberto aqui:
 
 - Os arquivos anteriores continuam no histórico público do repositório.
-- A credencial do GitHub usada para publicar ainda não está limitada a esse único repositório, e a branch principal não está protegida.
+- A credencial do GitHub usada para publicar ainda não está limitada a esse único repositório.
 - Uma assinatura válida mostra quem publicou um arquivo, não que ele é recente: quem conseguisse alterar arquivos no GitHub poderia recolocar um arquivo assinado mais antigo. Os apps conferem o dia dentro de cada arquivo e a hora da coleta.
 - A chave de assinatura fica na máquina coletora. A assinatura protege contra alterações feitas no GitHub, não contra a tomada dessa máquina.
 
-## 14 de novembro de 2026: apps (escritas, ainda não lançadas)
+## 14 de novembro de 2026: apps (escritas e revisadas; nas mãos das lojas ou guardadas)
 
-**Achados tratados:** A3, A4, M1 (lado do app), M2, M6 e vários achados baixos.
-**Onde:** os repositórios privados do app: iPhone e Apple Watch na branch `claude/audit-fixes`, Android e Wear OS na branch `claude/audit-fixes-android`. **Nada disso chegou aos usuários ainda.**
+**Achados tratados:** A3, A4, M1 (lado do app), M2, M5 (código), M6 e vários achados baixos.
+**Onde:** os repositórios privados do app: iPhone e Apple Watch na branch `claude/audit-fixes` (commit `4f2a396`, build 8 da versão 1.0), Android e Wear OS na branch `claude/audit-fixes-android` (commit `aa6c67a`, código de versão 4).
+
+Em que pé está cada um:
+
+- **iPhone e Apple Watch:** o build 8 foi enviado à Apple em 14 nov. 2026. O envio anterior da versão 1.0 (build 7) foi retirado antes da revisão. A descrição na App Store já traz os links nos 13 idiomas. O build 8 está no TestFlight para os testadores internos e espera a revisão de beta da Apple para os testadores públicos. O envio para a revisão da App Store está preparado e será feito junto com a assinatura. **Os usuários em geral ainda não o têm.**
+- **Android e Wear OS:** a versão 4 está gerada e guardada. Ela será enviada quando o Google terminar de revisar a primeira versão e quando as páginas de termos e de suporte para as quais ela aponta estiverem publicadas. **Os usuários ainda não a têm.**
 
 O que mudou:
 
@@ -42,13 +49,21 @@ O que mudou:
 - **A3.** A descrição na App Store ganha os links dos Termos de Uso e da Política de Privacidade nos 13 idiomas e perde uma frase sobre alertas instantâneos, que esta versão não pode mostrar.
 - **A4.** O app do Android passa a ter links para a política de privacidade e para os termos da Casa NUA, na tela de assinatura e no menu.
 - **M6.** O texto da loja do Android e a tela inicial agora dizem que o app baixa da Casa NUA um pequeno arquivo com os textos da tela.
-- **Achados baixos.** Os dois apps recusam o que tem formato de chave privada ou de frase de recuperação e não enviam nada; nomes de versão e números de dia vindos de fora são conferidos com rigor; o Android envia um identificador genérico fixo em vez de detalhes do aparelho, deixa os seus dados fora dos backups e ignora os atalhos de teste nas versões de loja; comentários desatualizados e um rascunho antigo de privacidade foram corrigidos ou removidos.
+- **M5 (só o código; o servidor continua desligado).** Os registros de "alerta já enviado" do servidor de alertas instantâneos não contêm mais o endereço de notificação do aparelho, só um hash com sal dele, de modo que nada do que resta depois de desligar pode ser convertido de volta no endereço. Os pedidos têm tamanho e formato conferidos, os nomes de versão são conferidos com rigor, e um limite de frequência pode ser ligado. A documentação dele agora diz que ele não deve ser publicado enquanto não conferir que os pedidos vêm do app verdadeiro e não ler os dados assinados. O M5 continua aberto.
+- **Achados baixos.** Os dois apps recusam o que tem formato de chave privada ou de frase de recuperação e não enviam nada; nomes de versão e números de dia vindos de fora são conferidos com rigor; os dados guardados por versões anteriores, de antes de as assinaturas serem conferidas, são descartados; o Android envia um identificador genérico fixo em vez de detalhes do aparelho, deixa os seus dados fora dos backups e ignora os atalhos de teste nas versões de loja; comentários desatualizados e um rascunho antigo de privacidade foram corrigidos ou removidos.
 
-Como foi conferido até agora:
+Como foi conferido:
 
-- Testes automáticos com arquivos assinados reais: arquivos válidos conferem; um byte alterado, um arquivo servido com outro nome, outra chave, uma chave desconhecida e um formato antigo são todos recusados. iPhone: 33 testes passaram. Android: 22 testes passaram.
-- Os dois apps compilam, incluindo a etapa de minificação de lançamento do Android.
-- **Ainda não feito:** revisão por uma instância nova, execução num simulador e num emulador contra os arquivos assinados no ar, e lançamento. Esta entrada será atualizada quando cada etapa for concluída.
+- **Testes automáticos com arquivos assinados reais:** arquivos válidos conferem; um byte alterado, um arquivo servido com outro nome, outra chave, uma chave desconhecida e um formato antigo são todos recusados. iPhone: 33 testes passaram. Android: 24 testes passaram.
+- **Revisado.** Uma instância nova revisou as mudanças de cada app e não encontrou defeito impeditivo. Ela conferiu os bytes exatos que são assinados, que todas as partes de cada app (app, relógio, widgets, atalho de voz, atualização em segundo plano) passam pelo caminho verificado, que não sobrou nenhum endereço de arquivo sem assinatura e que os arquivos assinados no ar conferem com o código enviado. Ela apontou diferenças de texto entre as duas plataformas e um gerador de textos quebrado; os dois pontos foram alinhados e corrigidos em seguida.
+- **Executado contra os dados assinados no ar:** o app do iPhone num simulador e o app do Android num emulador (instalação limpa) carregaram o dia atual pelo caminho verificado. No Android, a recusa de chave privada também foi testada à mão: a mensagem apareceu e nenhum pedido foi enviado.
+- Os dois apps compilam, incluindo a etapa de minificação de lançamento do Android. O build do iPhone que foi enviado foi conferido: não leva o desbloqueio de teste nem o endereço de alertas instantâneos.
+
+Limites conhecidos, apontados pelas revisões: um arquivo antigo corretamente assinado poderia ser reapresentado (os apps conferem o dia dentro de cada arquivo e a hora da coleta, não mais que isso); os binários finais das lojas não foram inspecionados; as traduções além do inglês e do português não foram revisadas.
+
+## 14 de novembro de 2026: site
+
+- Uma seção "Auditado regularmente" foi acrescentada à página do app, antes da tela de download, com links para o relatório e para a página de situação deste repositório. Ela diz que a auditoria é pedida pela Casa NUA e feita por revisores de IA, não por uma empresa externa. Revisada por uma instância nova antes da publicação.
 
 ## Em rascunho, esperando a revisão da Casa NUA
 
