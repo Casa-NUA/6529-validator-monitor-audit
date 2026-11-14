@@ -35,7 +35,7 @@ O que continua aberto aqui:
 ## 14 de novembro de 2026: apps (escritas e revisadas; nas mãos das lojas ou guardadas)
 
 **Achados tratados:** A3, A4, M1 (lado do app), M2, M5 (código), M6 e vários achados baixos.
-**Onde:** os repositórios privados do app: iPhone e Apple Watch na branch `claude/audit-fixes` (commit `4f2a396`, build 8 da versão 1.0), Android e Wear OS na branch `claude/audit-fixes-android` (commit `aa6c67a`, código de versão 4).
+**Onde:** os repositórios privados do app: iPhone e Apple Watch na branch `claude/audit-fixes` (commit `4f2a396`, build 8 da versão 1.0), Android e Wear OS na branch `claude/audit-fixes-android` (commit `aa6c67a`, depois `48c98c0` com os achados baixos; código de versão 4).
 
 Em que pé está cada um:
 
@@ -64,6 +64,13 @@ Limites conhecidos, apontados pelas revisões: um arquivo antigo corretamente as
 ## 14 de novembro de 2026: site
 
 - Uma seção "Auditado regularmente" foi acrescentada à página do app, antes da tela de download, com links para o relatório e para a página de situação deste repositório. Ela diz que a auditoria é pedida pela Casa NUA e feita por revisores de IA, não por uma empresa externa. Revisada por uma instância nova antes da publicação.
+
+## 14 de novembro de 2026: achados baixos
+
+- **Data dos arquivos publicados (corrigido, no ar).** O `network.json` agora traz `validators_unix` e `cycle_unix`: quando a lista de validadores e o arquivo do dia foram gravados pela última vez. Commit [`fe00e77`](https://github.com/Casa-NUA/6529-network-data/commit/fe00e77) no repositório de dados. Revisado antes de entrar no ar: uma instância nova passou o coletor por todos os caminhos de falha (pasta vazia, nó sem membros, busca que falha, virada do dia, arquivo anterior danificado) e comparou o resultado com o que estava publicado; só os dois campos novos foram acrescentados.
+- **Leituras em segundo plano no Android (escrito, na versão 4 guardada; commits `894e1a0` e `48c98c0`).** A atualização em segundo plano a cada 15 minutos agora roda só para assinantes, no celular e no relógio. A revisão da primeira versão desta correção mostrou que ela poderia deixar um assinante pagante sem serviço: quem tivesse a assinatura reativada fora do app (um cartão recusado e cobrado depois, um plano pausado e retomado) ficaria sem alertas até abrir o app. Isso foi corrigido antes de qualquer lançamento: por 90 dias depois do fim de uma assinatura, o app pergunta ao Google Play uma vez por dia se ela voltou, sem acessar os servidores de dados. 36 testes automáticos passam.
+- **Atalhos de teste no iPhone (escrito; commit `ae42f6e`).** As opções de inicialização usadas para capturas de tela só são compiladas nas versões de desenvolvimento. Isso sai no build seguinte ao build 8, que já estava com a Apple.
+- **Fontes do Google no site (aberto, por decisão).** A página que hospeda a seção do app carrega as mesmas fontes por conta própria, então tirá-las da seção não mudaria nada para o visitante. A política de privacidade agora informa isso.
 
 ## 14 de novembro de 2026: política de privacidade, termos, suporte e textos da página (publicados)
 

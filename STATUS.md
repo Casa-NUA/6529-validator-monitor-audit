@@ -40,12 +40,12 @@ Details and evidence for each fix: [audits/2026-11-14/fixes.en.md](audits/2026-1
 |---|---|
 | A private key pasted into the handle field would be sent to 6529's server | **Fix written, not yet released** (both apps refuse it and send nothing). |
 | Text from outside sources is not checked strictly enough | **Fix written, not yet released** (strict version format, day range checks). |
-| Android refreshes in the background every 15 minutes for all users | **Open.** |
-| Hidden test shortcuts remain in release builds | **Fix written, not yet released** on Android. **Open** on iPhone. |
+| Android refreshes in the background every 15 minutes for all users | **Fix written, not yet released** (Android version 4, held): background reads only for subscribers. |
+| Hidden test shortcuts remain in release builds | **Fix written, not yet released**: on Android in version 4; on iPhone in the build after build 8. |
 | Data saved before signatures were checked could still be shown after an update (found while reviewing the fixes) | **Fix written, not yet released**: the new versions discard it. |
-| The website loads fonts from Google | **Open.** |
+| The website loads fonts from Google | **Open**, and now disclosed in the privacy policy. The page that hosts the app's section loads the same fonts itself, so removing them from the section alone would change nothing for a visitor. |
 | Website wording: Android listed without "coming soon", one price shown to all, sample day not labelled | **Fixed** on 14 Nov 2026. |
-| Published files carry no age stamp of their own | **Open.** |
+| Published files carry no age stamp of their own | **Fixed** on 14 Nov 2026: `network.json` now says when the validator list and the day's file were last written. |
 | The data repository's README does not list every field and gives no security contact | **Fixed** on 14 Nov 2026. |
 | Stale internal comments and privacy file | **Fix written, not yet released.** |
 | The subscription check runs on the device | **Open**, accepted: it affects the publisher's income, not users. |

@@ -40,12 +40,12 @@ Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audit
 |---|---|
 | Uma chave privada colada no campo do handle seria enviada ao servidor da 6529 | **Correção escrita, ainda não lançada** (os dois apps recusam e não enviam nada). |
 | Textos vindos de fontes externas não são conferidos com rigor suficiente | **Correção escrita, ainda não lançada** (formato rígido de versão, conferência do número do dia). |
-| O Android atualiza em segundo plano a cada 15 minutos para todos os usuários | **Aberto.** |
-| Atalhos de teste escondidos continuam nas versões de loja | **Correção escrita, ainda não lançada** no Android. **Aberto** no iPhone. |
+| O Android atualiza em segundo plano a cada 15 minutos para todos os usuários | **Correção escrita, ainda não lançada** (versão 4 do Android, guardada): leituras em segundo plano só para assinantes. |
+| Atalhos de teste escondidos continuam nas versões de loja | **Correção escrita, ainda não lançada**: no Android, na versão 4; no iPhone, no build seguinte ao build 8. |
 | Dados guardados antes de as assinaturas serem conferidas ainda poderiam aparecer depois de uma atualização (encontrado na revisão das correções) | **Correção escrita, ainda não lançada**: as novas versões os descartam. |
-| O site carrega fontes do Google | **Aberto.** |
+| O site carrega fontes do Google | **Aberto**, e agora informado na política de privacidade. A página que hospeda a seção do app carrega as mesmas fontes por conta própria, então tirá-las só da seção não mudaria nada para o visitante. |
 | Textos do site: Android listado sem "em breve", um preço só para todos, dia de exemplo sem aviso | **Corrigido** em 14 nov. 2026. |
-| Os arquivos publicados não trazem a própria data | **Aberto.** |
+| Os arquivos publicados não trazem a própria data | **Corrigido** em 14 nov. 2026: o `network.json` agora diz quando a lista de validadores e o arquivo do dia foram gravados pela última vez. |
 | O README do repositório de dados não lista todos os campos nem dá contato de segurança | **Corrigido** em 14 nov. 2026. |
 | Comentários internos e arquivo de privacidade desatualizados | **Correção escrita, ainda não lançada.** |
 | A conferência da assinatura é feita no aparelho | **Aberto**, aceito: afeta a receita da Casa NUA, não os usuários. |

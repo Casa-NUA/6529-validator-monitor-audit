@@ -35,7 +35,7 @@ What is still open here:
 ## 14 November 2026: apps (written and reviewed; in the stores' hands or held)
 
 **Findings addressed:** H3, H4, M1 (app side), M2, M5 (code), M6, and several low findings.
-**Where:** the app's private repositories: iPhone and Apple Watch branch `claude/audit-fixes` (commit `4f2a396`, build 8 of version 1.0), Android and Wear OS branch `claude/audit-fixes-android` (commit `aa6c67a`, version code 4).
+**Where:** the app's private repositories: iPhone and Apple Watch branch `claude/audit-fixes` (commit `4f2a396`, build 8 of version 1.0), Android and Wear OS branch `claude/audit-fixes-android` (commit `aa6c67a`, later `48c98c0` with the low findings; version code 4).
 
 Where each stands:
 
@@ -64,6 +64,13 @@ Known limits, stated by the reviews: a correctly signed older file could be repl
 ## 14 November 2026: website
 
 - A section "Audited regularly" was added to the app's page, before the download screen, linking this repository's report and status page. It says the audit is commissioned by the publisher and carried out by AI reviewers, not by an outside firm. Reviewed by a fresh instance before publication.
+
+## 14 November 2026: low findings
+
+- **Age of the published files (fixed, live).** `network.json` now carries `validators_unix` and `cycle_unix`: when the validator list and the day's file were last written. Data repository commit [`fe00e77`](https://github.com/Casa-NUA/6529-network-data/commit/fe00e77). Reviewed before going live: a fresh instance ran the collector through every failure path (empty folder, node with no members, failed fetch, day change, damaged previous file) and compared the output with what was published; only the two new fields were added.
+- **Android background reads (written, in the held version 4; commits `894e1a0`, `48c98c0`).** The 15-minute background refresh now runs only for subscribers, on phone and watch. The review of the first version of this fix found that it could strand a paying subscriber: someone whose subscription came back outside the app (a declined card charged later, a paused plan resumed) would have got no alerts until they opened the app. It was corrected before any release: for 90 days after a subscription ends, the app asks Google Play once a day whether it is back, without contacting the data servers. 36 automated tests pass.
+- **Test shortcuts on iPhone (written; commit `ae42f6e`).** The launch options used for screenshots are compiled only into development builds. This ships in the build after build 8, which was already with Apple.
+- **Fonts from Google on the website (open, by decision).** The page that hosts the app's section loads the same fonts itself, so removing them from the section would change nothing for a visitor. The privacy policy now says so.
 
 ## 14 November 2026: privacy policy, terms, support and page wording (published)
 
