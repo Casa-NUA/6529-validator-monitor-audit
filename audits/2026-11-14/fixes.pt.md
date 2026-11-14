@@ -39,7 +39,7 @@ O que continua aberto aqui:
 
 Em que pé está cada um:
 
-- **iPhone e Apple Watch:** o build 8 foi enviado à Apple em 14 nov. 2026. O envio anterior da versão 1.0 (build 7) foi retirado antes da revisão. A descrição na App Store já traz os links nos 13 idiomas. O build 8 está no TestFlight para os testadores internos e espera a revisão de beta da Apple para os testadores públicos. O envio para a revisão da App Store está preparado e será feito junto com a assinatura. **Os usuários em geral ainda não o têm.**
+- **iPhone e Apple Watch:** o build 8 foi enviado à Apple em 14 nov. 2026. O envio anterior da versão 1.0 (build 7) foi retirado antes da revisão. A descrição na App Store já traz os links nos 13 idiomas. O build 8 está no TestFlight para os testadores internos e espera a revisão de beta da Apple para os testadores públicos. Ele foi enviado para a revisão da App Store, junto com a assinatura, em 14 nov. 2026 às 16:13 UTC. **Os usuários em geral ainda não o têm.**
 - **Android e Wear OS:** a versão 4 está gerada e guardada. Ela será enviada quando o Google terminar de revisar a primeira versão e quando as páginas de termos e de suporte para as quais ela aponta estiverem publicadas. **Os usuários ainda não a têm.**
 
 O que mudou:

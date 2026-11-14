@@ -26,7 +26,7 @@ Details and evidence for each fix: [audits/2026-11-14/fixes.en.md](audits/2026-1
 
 | | Finding | Status |
 |---|---|---|
-| M1 | The network data is not signed | **Publisher side fixed** on 14 Nov 2026: every data file is now published signed. **App side: fix written, not yet released**: iPhone build 8 (uploaded to Apple, awaiting review) and Android version 4 (held) accept only signed files. |
+| M1 | The network data is not signed | **Publisher side fixed** on 14 Nov 2026: every data file is now published signed. **App side: fix written, not yet released**: iPhone build 8 (submitted for App Store review on 14 Nov 2026) and Android version 4 (held) accept only signed files. |
 | M2 | A wording file on Casa NUA's server can replace almost any text in the app | **Fix written, not yet released.** Privacy, data-source and subscription texts can no longer be replaced. |
 | M3 | The privacy policy does not say who the legal publisher is or list users' rights | **Open.** A revised policy is drafted and awaits the publisher's review. |
 | M4 | No terms written for this app; the support page is about another app | **Open.** Terms and a support section are drafted and await the publisher's review. |

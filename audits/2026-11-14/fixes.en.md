@@ -39,7 +39,7 @@ What is still open here:
 
 Where each stands:
 
-- **iPhone and Apple Watch:** build 8 was uploaded to Apple on 14 Nov 2026. The earlier submission of version 1.0 (build 7) was withdrawn before review. The App Store description now carries the links in all 13 languages. Build 8 is in TestFlight for internal testers and awaits Apple's beta review for public testers. Its submission for App Store review is prepared and will be sent together with the subscription. **Public users do not have it yet.**
+- **iPhone and Apple Watch:** build 8 was uploaded to Apple on 14 Nov 2026. The earlier submission of version 1.0 (build 7) was withdrawn before review. The App Store description now carries the links in all 13 languages. Build 8 is in TestFlight for internal testers and awaits Apple's beta review for public testers. It was submitted for App Store review, together with the subscription, on 14 Nov 2026 at 16:13 UTC. **Public users do not have it yet.**
 - **Android and Wear OS:** version 4 is built and held. It will be sent once Google finishes reviewing the first version, and once the terms and support pages it links to are published. **Users do not have it yet.**
 
 What changed:
