@@ -40,7 +40,7 @@ O que continua aberto aqui:
 Em que pé está cada um:
 
 - **iPhone e Apple Watch:** o build 8 foi enviado à Apple em 14 nov. 2026. O envio anterior da versão 1.0 (build 7) foi retirado antes da revisão. A descrição na App Store já traz os links nos 13 idiomas. O build 8 está no TestFlight para os testadores internos e espera a revisão de beta da Apple para os testadores públicos. Ele foi enviado para a revisão da App Store, junto com a assinatura, em 14 nov. 2026 às 16:13 UTC. **Os usuários em geral ainda não o têm.**
-- **Android e Wear OS:** a versão 4 está gerada e guardada. Ela será enviada quando o Google terminar de revisar a primeira versão e quando as páginas de termos e de suporte para as quais ela aponta estiverem publicadas. **Os usuários ainda não a têm.**
+- **Android e Wear OS:** a versão 4 está gerada e guardada. Ela será enviada quando o Google terminar de revisar a primeira versão. **Os usuários ainda não a têm.**
 
 O que mudou:
 
@@ -65,8 +65,21 @@ Limites conhecidos, apontados pelas revisões: um arquivo antigo corretamente as
 
 - Uma seção "Auditado regularmente" foi acrescentada à página do app, antes da tela de download, com links para o relatório e para a página de situação deste repositório. Ela diz que a auditoria é pedida pela Casa NUA e feita por revisores de IA, não por uma empresa externa. Revisada por uma instância nova antes da publicação.
 
-## Em rascunho, esperando a revisão da Casa NUA
+## 14 de novembro de 2026: política de privacidade, termos, suporte e textos da página (publicados)
 
-- **M3.** Uma política de privacidade revisada (quem é a empresa, bases legais, direitos, transferências internacionais, o site).
-- **M4.** Termos de uso escritos para este app e uma seção de suporte para ele.
-- Textos do site para os achados baixos (Android "em breve", preço por país, dia de exemplo identificado).
+**Achados tratados:** M3, M4 e o achado baixo dos textos do site.
+**Onde:** https://app.nua.casa/?app=monitor#privacy, `#terms` e `#support`; os textos ficam arquivados em [policies/2026-11-14/](../../policies/2026-11-14/), e a política que eles substituem em [policies/2026-11-13/](../../policies/2026-11-13/).
+
+O que mudou:
+
+- **M3.** A política de privacidade agora identifica a empresa (razão social, CNPJ, endereço) e lista cada acesso que o app faz e a quem, as bases legais, os direitos dos usuários pela lei brasileira e pela europeia, as transferências internacionais, o que o site carrega e um endereço de contato próprio deste app.
+- **M4.** O app passa a ter Termos de Uso próprios (independente, só de leitura, dados não oficiais de um único nó, que podem atrasar ou estar errados, a assinatura e como cancelar, reembolsos e o direito de arrependimento de 7 dias no Brasil) e uma página de suporte própria.
+- **Site.** O Android aparece como "em breve" até existir o link da loja; o dia mostrado no anel é identificado como exemplo; a nota de preço diz que a loja mostra o preço do seu país.
+
+Como foi conferido:
+
+- **Revisado duas vezes por instâncias novas**, contra o código do app. A primeira passada, feita ao finalizar os textos, retirou afirmações do rascunho que não eram verdadeiras (um nome de assinatura que o app não usa; widget na tela bloqueada e Siri no Android, que lá não existem). A segunda achou mais quatro pontos, todos corrigidos antes da publicação: os textos diziam que o app confere a assinatura dos dados sem dizer a partir de qual versão (as versões que estavam nas mãos das lojas naquela data não conferiam todas); três afirmações sobre o Android só valiam para a versão que estava guardada; a pasta de versões anteriores para a qual a política apontava ainda não existia; e uma frase sobre o que as lojas informam à Casa NUA deixava de fora os números de downloads e de falhas.
+- **Conferências automáticas (92):** inglês e português batem seção por seção; as páginas do outro app no mesmo site aparecem idênticas com e sem o código novo, em 88 combinações de endereço e idioma; nenhum valor da barra de endereços é escrito na página.
+- **Conferido no ar** depois da publicação: os arquivos servidos são idênticos, byte a byte, aos revisados.
+
+Limite conhecido, dito nos próprios textos: a conferência de assinatura e algumas proteções do Android valem a partir da versão 1.0 (build 8) no iPhone e da versão 1.0 (4) no Android. Essa frase será retirada quando as versões de teste anteriores não estiverem mais em uso.

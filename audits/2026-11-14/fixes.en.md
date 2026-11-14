@@ -40,7 +40,7 @@ What is still open here:
 Where each stands:
 
 - **iPhone and Apple Watch:** build 8 was uploaded to Apple on 14 Nov 2026. The earlier submission of version 1.0 (build 7) was withdrawn before review. The App Store description now carries the links in all 13 languages. Build 8 is in TestFlight for internal testers and awaits Apple's beta review for public testers. It was submitted for App Store review, together with the subscription, on 14 Nov 2026 at 16:13 UTC. **Public users do not have it yet.**
-- **Android and Wear OS:** version 4 is built and held. It will be sent once Google finishes reviewing the first version, and once the terms and support pages it links to are published. **Users do not have it yet.**
+- **Android and Wear OS:** version 4 is built and held. It will be sent once Google finishes reviewing the first version. **Users do not have it yet.**
 
 What changed:
 
@@ -65,8 +65,21 @@ Known limits, stated by the reviews: a correctly signed older file could be repl
 
 - A section "Audited regularly" was added to the app's page, before the download screen, linking this repository's report and status page. It says the audit is commissioned by the publisher and carried out by AI reviewers, not by an outside firm. Reviewed by a fresh instance before publication.
 
-## Drafted, awaiting the publisher's review
+## 14 November 2026: privacy policy, terms, support and page wording (published)
 
-- **M3.** A revised privacy policy (who the publisher is, legal bases, rights, international transfers, the website).
-- **M4.** Terms of use written for this app, and a support section for it.
-- Website wording for the low findings (Android "coming soon", price by country, sample day labelled).
+**Findings addressed:** M3, M4, and the website-wording low finding.
+**Where:** https://app.nua.casa/?app=monitor#privacy, `#terms` and `#support`; the texts are archived in [policies/2026-11-14/](../../policies/2026-11-14/), and the policy they replace in [policies/2026-11-13/](../../policies/2026-11-13/).
+
+What changed:
+
+- **M3.** The privacy policy now names the publisher (legal name, registration number, address), lists every request the app makes and to whom, the legal bases, users' rights under Brazilian and European law, international transfers, what the website loads, and a contact address for this app.
+- **M4.** The app has Terms of Use of its own (independent, read-only, unofficial data from one node that can be late or wrong, the subscription and how to cancel, refunds and the 7-day withdrawal right in Brazil) and a support page of its own.
+- **Website.** Android is shown as "coming soon" until its store link exists; the day shown in the ring is labelled as an example; the price note says the store shows your country's price.
+
+How it was checked:
+
+- **Reviewed twice by fresh instances** against the app's code. The first pass, done while finalising the texts, removed draft statements that were not true of the app (a subscription name the app does not use; a Lock Screen widget and Siri on Android, which do not exist there). The second found four more points, all fixed before publication: the texts said the app checks the data's signature without saying from which version (the versions in the stores' hands on that date did not all do so); three Android statements were true only of the version being held; the folder of earlier versions that the policy pointed to did not exist yet; and a sentence about what the stores tell the publisher left out download and crash figures.
+- **Automated checks (92):** English and Portuguese match section by section; the other app's pages on the same site render identically with and without the new code in 88 address and language combinations; no address-bar value is written into the page.
+- **Checked live** after publication: the served files are byte-identical to the reviewed ones.
+
+Known limit, stated in the texts themselves: the signature check and some Android protections apply from iPhone version 1.0 (build 8) and Android version 1.0 (4) onward. That sentence will be removed once earlier test versions are no longer in use.
