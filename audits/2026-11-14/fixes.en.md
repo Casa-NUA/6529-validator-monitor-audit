@@ -65,6 +65,10 @@ Known limits, stated by the reviews: a correctly signed older file could be repl
 
 - A section "Audited regularly" was added to the app's page, before the download screen, linking this repository's report and status page. It says the audit is commissioned by the publisher and carried out by AI reviewers, not by an outside firm. Reviewed by a fresh instance before publication.
 
+## 14 November 2026: the collector runs every 5 minutes
+
+Not an audit finding: a change made the same day, recorded here because it changes published text. The collector now runs every 5 minutes instead of 10 (data repository commit [`748b58f`](https://github.com/Casa-NUA/6529-network-data/commit/748b58f)). Its README explains why not less: GitHub serves the raw files through a cache that keeps each one for 5 minutes, so a shorter interval would gain little while adding commits. The app's page and the support text were updated ([policies/2026-11-14b/](../../policies/2026-11-14b/)); the texts inside the apps follow in their next versions. Reviewed by a fresh instance before going live, which corrected an overstatement in the first wording of that explanation.
+
 ## 14 November 2026: low findings
 
 - **Age of the published files (fixed, live).** `network.json` now carries `validators_unix` and `cycle_unix`: when the validator list and the day's file were last written. Data repository commit [`fe00e77`](https://github.com/Casa-NUA/6529-network-data/commit/fe00e77). Reviewed before going live: a fresh instance ran the collector through every failure path (empty folder, node with no members, failed fetch, day change, damaged previous file) and compared the output with what was published; only the two new fields were added.

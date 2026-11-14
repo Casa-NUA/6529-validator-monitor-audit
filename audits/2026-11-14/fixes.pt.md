@@ -65,6 +65,10 @@ Limites conhecidos, apontados pelas revisões: um arquivo antigo corretamente as
 
 - Uma seção "Auditado regularmente" foi acrescentada à página do app, antes da tela de download, com links para o relatório e para a página de situação deste repositório. Ela diz que a auditoria é pedida pela Casa NUA e feita por revisores de IA, não por uma empresa externa. Revisada por uma instância nova antes da publicação.
 
+## 14 de novembro de 2026: o coletor roda a cada 5 minutos
+
+Não é um achado da auditoria: é uma mudança feita no mesmo dia, registrada aqui porque altera texto publicado. O coletor agora roda a cada 5 minutos, em vez de 10 (commit [`748b58f`](https://github.com/Casa-NUA/6529-network-data/commit/748b58f) no repositório de dados). O README dele explica por que não menos: o GitHub entrega os arquivos por um cache que guarda cada um por 5 minutos, então um intervalo menor ganharia pouco e acrescentaria commits. A página do app e o texto de suporte foram atualizados ([policies/2026-11-14b/](../../policies/2026-11-14b/)); os textos de dentro dos apps acompanham nas próximas versões. Revisado por uma instância nova antes de entrar no ar, que corrigiu um exagero na primeira redação dessa explicação.
+
 ## 14 de novembro de 2026: achados baixos
 
 - **Data dos arquivos publicados (corrigido, no ar).** O `network.json` agora traz `validators_unix` e `cycle_unix`: quando a lista de validadores e o arquivo do dia foram gravados pela última vez. Commit [`fe00e77`](https://github.com/Casa-NUA/6529-network-data/commit/fe00e77) no repositório de dados. Revisado antes de entrar no ar: uma instância nova passou o coletor por todos os caminhos de falha (pasta vazia, nó sem membros, busca que falha, virada do dia, arquivo anterior danificado) e comparou o resultado com o que estava publicado; só os dois campos novos foram acrescentados.
