@@ -26,7 +26,7 @@ Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audit
 
 | | Achado | Situação |
 |---|---|---|
-| M1 | Os dados da rede não são assinados | **Corrigido do lado da publicação** em 14 nov. 2026: todo arquivo de dados agora é publicado assinado. **Do lado do app: correção escrita, ainda não lançada**: o build 8 do iPhone (enviado para a revisão da App Store em 14 nov. 2026) e a versão 4 do Android (guardada) só aceitam arquivos assinados. |
+| M1 | Os dados da rede não são assinados | **Corrigido do lado da publicação** em 14 nov. 2026: todo arquivo de dados agora é publicado assinado. **Do lado do app: correção escrita, ainda não lançada**: o build 8 do iPhone (no beta público do TestFlight desde 15 nov. 2026 UTC; enviado para a revisão da App Store em 14 nov. 2026) e a versão 4 do Android (guardada) só aceitam arquivos assinados. |
 | M2 | Um arquivo de textos no servidor da Casa NUA pode substituir quase qualquer texto do app | **Correção escrita, ainda não lançada.** Os textos de privacidade, de origem dos dados e de assinatura não podem mais ser substituídos. |
 | M3 | A política de privacidade não diz quem é a empresa responsável nem lista os direitos dos usuários | **Corrigido** em 14 nov. 2026: a política revisada está publicada. Todas as versões ficam guardadas em [policies/](policies/). |
 | M4 | Não há termos escritos para este app; a página de suporte trata de outro app | **Corrigido** em 14 nov. 2026: os Termos de Uso e uma página de suporte deste app estão publicados. |
