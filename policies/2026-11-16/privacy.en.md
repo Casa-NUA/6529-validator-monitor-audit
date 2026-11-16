@@ -1,6 +1,6 @@
 # Privacy Policy — 6529 Validator Monitor
 
-*Last updated: 14 November 2026*
+*Last updated: 16 November 2026*
 
 This policy covers 6529 Validator Monitor for iPhone and Apple Watch, and for Android phones and Wear OS watches, and the app's web page. In short: no account, no wallet connection, no ads, no tracking. The app reads public network data, what you follow stays on your devices, and the app sends Casa NUA nothing about you.
 
@@ -32,7 +32,9 @@ Every request the app makes uses HTTPS. This is the complete list:
 
 4\. Casa NUA's own server, a Cloudflare Worker (nua-published-curations.casanua.workers.dev): the app downloads a file of on-screen texts (explanations, glossary and similar wording, so they can be corrected without an app update), at most once an hour. The request carries nothing about you or the accounts you follow, and request logging is switched off on this server.
 
-5\. Apple or Google: when you subscribe, restore a purchase or the app checks your subscription, the purchase is handled by the App Store or Google Play on your device, under your Apple Account or Google Account.
+5\. Casa NUA's live chain server, a Cloudflare Worker (monitor6529-live.casanua.workers.dev): only while you have the Chain page open, the app asks it every few seconds for the 6529 chain's latest blocks. The request carries nothing about you or the accounts you follow, and the server keeps no record of the requests.
+
+6\. Apple or Google: when you subscribe, restore a purchase or the app checks your subscription, the purchase is handled by the App Store or Google Play on your device, under your Apple Account or Google Account.
 
 As with any internet request, each of these services necessarily sees your device's IP address and the standard request headers. On iPhone and Apple Watch these are the ones the system adds, such as the app's name and version and your language. On Android the app's own requests carry a fixed app name, with no device model and no Android version. GitHub, 6529, Cloudflare, Apple and Google each handle that information under their own privacy policies. Casa NUA does not receive it from them.
 

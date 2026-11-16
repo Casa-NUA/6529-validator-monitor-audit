@@ -1,6 +1,6 @@
 # Política de Privacidade — 6529 Validator Monitor
 
-*Última atualização: 14 de novembro de 2026*
+*Última atualização: 16 de novembro de 2026*
 
 Esta política vale para o 6529 Validator Monitor no iPhone e no Apple Watch, nos celulares Android e relógios Wear OS, e para a página do app na web. Em resumo: sem conta, sem conexão de carteira, sem publicidade, sem rastreamento. O app lê dados públicos da rede, o que você acompanha fica nos seus aparelhos, e o app não envia à Casa NUA nada sobre você.
 
@@ -32,7 +32,9 @@ Todo pedido que o app faz usa HTTPS. Esta é a lista completa:
 
 4\. O servidor da própria Casa NUA, um Worker da Cloudflare (nua-published-curations.casanua.workers.dev): o app baixa um arquivo com textos de tela (explicações, glossário e textos parecidos, para que possam ser corrigidos sem atualizar o app), no máximo uma vez por hora. O pedido não leva nada sobre você nem sobre as contas que você acompanha, e o registro de pedidos está desligado nesse servidor.
 
-5\. Apple ou Google: quando você assina, restaura uma compra ou o app confere a sua assinatura, a compra é tratada pela App Store ou pelo Google Play no seu aparelho, na sua Conta Apple ou Conta Google.
+5\. O servidor da Casa NUA para a página Chain ao vivo, um Worker da Cloudflare (monitor6529-live.casanua.workers.dev): só enquanto a página Chain estiver aberta, o app pede a ele, a cada poucos segundos, os blocos mais recentes da 6529 chain. O pedido não leva nada sobre você nem sobre as contas que você acompanha, e o servidor não guarda registro dos pedidos.
+
+6\. Apple ou Google: quando você assina, restaura uma compra ou o app confere a sua assinatura, a compra é tratada pela App Store ou pelo Google Play no seu aparelho, na sua Conta Apple ou Conta Google.
 
 Como em qualquer pedido pela internet, cada um desses serviços necessariamente vê o endereço IP do seu aparelho e os cabeçalhos padrão do pedido. No iPhone e no Apple Watch, são os que o sistema acrescenta, como o nome e a versão do app e o seu idioma. No Android, os pedidos do próprio app levam um nome fixo do app, sem modelo do aparelho e sem versão do Android. GitHub, 6529, Cloudflare, Apple e Google tratam essas informações conforme as suas próprias políticas de privacidade. A Casa NUA não as recebe deles.
 
