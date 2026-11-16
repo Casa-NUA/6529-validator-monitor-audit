@@ -1,6 +1,6 @@
 # Situação atual de cada achado
 
-**Última atualização:** 14 de novembro de 2026 · *In English: [STATUS.md](STATUS.md)*
+**Última atualização:** 16 de novembro de 2026 · *In English: [STATUS.md](STATUS.md)*
 
 O que cada situação quer dizer:
 
@@ -11,6 +11,8 @@ O que cada situação quer dizer:
 
 Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audits/2026-11-14/fixes.pt.md).
 
+**Versões:** a versão 1.0 (build 8) do iPhone e do Apple Watch está na App Store desde 16 nov. 2026. A versão 1.1 (build 15) foi enviada para a revisão da App Store em 16 nov. 2026. A versão 4 do Android continua guardada até o Google terminar de revisar a primeira versão.
+
 ## Auditoria nº 1 (14 de novembro de 2026)
 
 ### Altos
@@ -19,15 +21,15 @@ Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audit
 |---|---|---|
 | A1 | Os dados publicados permitem descobrir a qual conta pertence o nó coletor | **Corrigido** em 14 nov. 2026 para todas as novas publicações. Os arquivos anteriores continuam no histórico público do repositório de dados e não podem ser removidos. |
 | A2 | Quem conseguir escrever no repositório de dados poderia executar código na máquina que hospeda o validador | **Corrigido** em 14 nov. 2026. A branch principal está protegida contra reescrita de histórico, e o coletor agora publica com uma credencial limitada a esse único repositório. |
-| A3 | A página do app na App Store não tem link para os Termos de Uso | **Corrigido na página da loja** em 14 nov. 2026: a descrição na App Store agora traz os links dos Termos de Uso e da Política de Privacidade nos 13 idiomas. Ela fica visível ao público quando a Apple aprovar a versão 1.0. |
+| A3 | A página do app na App Store não tem link para os Termos de Uso | **Corrigido.** A descrição na App Store traz os links dos Termos de Uso e da Política de Privacidade nos 13 idiomas (incluídos em 14 nov. 2026). Ela está pública desde que a Apple aprovou a versão 1.0, em 16 nov. 2026. |
 | A4 | O app do Android não tem link para a política de privacidade, e o link de Termos leva aos termos do Google | **Correção escrita, ainda não lançada.** Está na versão 4 do Android, gerada e guardada até o Google terminar de revisar a primeira versão. |
 
 ### Médios
 
 | | Achado | Situação |
 |---|---|---|
-| M1 | Os dados da rede não são assinados | **Corrigido do lado da publicação** em 14 nov. 2026: todo arquivo de dados agora é publicado assinado. **Do lado do app: correção escrita, ainda não lançada**: o build 8 do iPhone (no beta público do TestFlight desde 15 nov. 2026 UTC; enviado para a revisão da App Store em 14 nov. 2026) e a versão 4 do Android (guardada) só aceitam arquivos assinados. |
-| M2 | Um arquivo de textos no servidor da Casa NUA pode substituir quase qualquer texto do app | **Correção escrita, ainda não lançada.** Os textos de privacidade, de origem dos dados e de assinatura não podem mais ser substituídos. |
+| M1 | Os dados da rede não são assinados | **Corrigido do lado da publicação** em 14 nov. 2026: todo arquivo de dados agora é publicado assinado. **Do lado do app: corrigido no iPhone** em 16 nov. 2026: a versão 1.0 (build 8), na App Store desde esse dia, só aceita arquivos assinados. **Android: correção escrita, ainda não lançada** (versão 4, guardada). |
+| M2 | Um arquivo de textos no servidor da Casa NUA pode substituir quase qualquer texto do app | **Corrigido no iPhone** em 16 nov. 2026 (versão 1.0 na App Store); **Android: correção escrita, ainda não lançada** (versão 4, guardada). Os textos de privacidade, de origem dos dados e de assinatura não podem mais ser substituídos. |
 | M3 | A política de privacidade não diz quem é a empresa responsável nem lista os direitos dos usuários | **Corrigido** em 14 nov. 2026: a política revisada está publicada. Todas as versões ficam guardadas em [policies/](policies/). |
 | M4 | Não há termos escritos para este app; a página de suporte trata de outro app | **Corrigido** em 14 nov. 2026: os Termos de Uso e uma página de suporte deste app estão publicados. |
 | M5 | O servidor de alertas instantâneos, se fosse ligado como está escrito, não corresponderia à política | **Inativo**, e **aberto**. Os registros dele não guardam mais o endereço de notificação do aparelho depois de desligar (código corrigido em 14 nov. 2026). O servidor continua desligado até também conferir que os pedidos vêm do app verdadeiro. |
@@ -38,11 +40,11 @@ Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audit
 
 | Achado | Situação |
 |---|---|
-| Uma chave privada colada no campo do handle seria enviada ao servidor da 6529 | **Correção escrita, ainda não lançada** (os dois apps recusam e não enviam nada). |
-| Textos vindos de fontes externas não são conferidos com rigor suficiente | **Correção escrita, ainda não lançada** (formato rígido de versão, conferência do número do dia). |
+| Uma chave privada colada no campo do handle seria enviada ao servidor da 6529 | **Corrigido no iPhone** em 16 nov. 2026 (versão 1.0 na App Store); **Android: correção escrita, ainda não lançada** (versão 4, guardada). Os dois apps recusam e não enviam nada. |
+| Textos vindos de fontes externas não são conferidos com rigor suficiente | **Corrigido no iPhone** em 16 nov. 2026 (versão 1.0 na App Store); **Android: correção escrita, ainda não lançada** (versão 4, guardada). Formato rígido de versão, conferência do número do dia. |
 | O Android atualiza em segundo plano a cada 15 minutos para todos os usuários | **Correção escrita, ainda não lançada** (versão 4 do Android, guardada): leituras em segundo plano só para assinantes. |
-| Atalhos de teste escondidos continuam nas versões de loja | **Correção escrita, ainda não lançada**: no Android, na versão 4; no iPhone, no build seguinte ao build 8. |
-| Dados guardados antes de as assinaturas serem conferidas ainda poderiam aparecer depois de uma atualização (encontrado na revisão das correções) | **Correção escrita, ainda não lançada**: as novas versões os descartam. |
+| Atalhos de teste escondidos continuam nas versões de loja | **Correção escrita, ainda não lançada**: no Android, na versão 4; no iPhone, na versão 1.1 (build 15), enviada para a revisão da App Store em 16 nov. 2026. |
+| Dados guardados antes de as assinaturas serem conferidas ainda poderiam aparecer depois de uma atualização (encontrado na revisão das correções) | **Corrigido no iPhone** em 16 nov. 2026 (a versão 1.0 na App Store os descarta); **Android: correção escrita, ainda não lançada** (versão 4, guardada). |
 | O site carrega fontes do Google | **Aberto**, e agora informado na política de privacidade. A página que hospeda a seção do app carrega as mesmas fontes por conta própria, então tirá-las só da seção não mudaria nada para o visitante. |
 | Textos do site: Android listado sem "em breve", um preço só para todos, dia de exemplo sem aviso | **Corrigido** em 14 nov. 2026. |
 | Os arquivos publicados não trazem a própria data | **Corrigido** em 14 nov. 2026: o `network.json` agora diz quando a lista de validadores e o arquivo do dia foram gravados pela última vez. |
