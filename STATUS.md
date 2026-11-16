@@ -11,7 +11,7 @@ What each status means:
 
 Details and evidence for each fix: [audits/2026-11-14/fixes.en.md](audits/2026-11-14/fixes.en.md).
 
-**Releases:** iPhone and Apple Watch version 1.0 (build 8) is live on the App Store since 16 Nov 2026. Version 1.1 (build 15) was submitted for App Store review on 16 Nov 2026. Android version 4 is still held until Google finishes reviewing the first version.
+**Releases:** iPhone and Apple Watch version 1.0 (build 8) is live on the App Store since 16 Nov 2026. Version 1.1 (build 15) is live on the App Store since 16 Nov 2026. Android version 4 is still held until Google finishes reviewing the first version.
 
 ## Audit no. 1 (14 November 2026)
 
@@ -43,7 +43,7 @@ Details and evidence for each fix: [audits/2026-11-14/fixes.en.md](audits/2026-1
 | A private key pasted into the handle field would be sent to 6529's server | **Fixed on iPhone** on 16 Nov 2026 (version 1.0 on the App Store); **Android: fix written, not yet released** (version 4, held). Both apps refuse it and send nothing. |
 | Text from outside sources is not checked strictly enough | **Fixed on iPhone** on 16 Nov 2026 (version 1.0 on the App Store); **Android: fix written, not yet released** (version 4, held). Strict version format, day range checks. |
 | Android refreshes in the background every 15 minutes for all users | **Fix written, not yet released** (Android version 4, held): background reads only for subscribers. |
-| Hidden test shortcuts remain in release builds | **Fix written, not yet released**: on Android in version 4; on iPhone in version 1.1 (build 15), submitted for App Store review on 16 Nov 2026. |
+| Hidden test shortcuts remain in release builds | **Fixed on iPhone** in version 1.1 (build 15), live on the App Store since 16 Nov 2026; on Android, fix written in version 4, not yet released. |
 | Data saved before signatures were checked could still be shown after an update (found while reviewing the fixes) | **Fixed on iPhone** on 16 Nov 2026 (version 1.0 on the App Store discards it); **Android: fix written, not yet released** (version 4, held). |
 | The website loads fonts from Google | **Open**, and now disclosed in the privacy policy. The page that hosts the app's section loads the same fonts itself, so removing them from the section alone would change nothing for a visitor. |
 | Website wording: Android listed without "coming soon", one price shown to all, sample day not labelled | **Fixed** on 14 Nov 2026. |

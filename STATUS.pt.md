@@ -11,7 +11,7 @@ O que cada situação quer dizer:
 
 Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audits/2026-11-14/fixes.pt.md).
 
-**Versões:** a versão 1.0 (build 8) do iPhone e do Apple Watch está na App Store desde 16 nov. 2026. A versão 1.1 (build 15) foi enviada para a revisão da App Store em 16 nov. 2026. A versão 4 do Android continua guardada até o Google terminar de revisar a primeira versão.
+**Versões:** a versão 1.0 (build 8) do iPhone e do Apple Watch está na App Store desde 16 nov. 2026. A versão 1.1 (build 15) está na App Store desde 16 nov. 2026. A versão 4 do Android continua guardada até o Google terminar de revisar a primeira versão.
 
 ## Auditoria nº 1 (14 de novembro de 2026)
 
@@ -43,7 +43,7 @@ Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audit
 | Uma chave privada colada no campo do handle seria enviada ao servidor da 6529 | **Corrigido no iPhone** em 16 nov. 2026 (versão 1.0 na App Store); **Android: correção escrita, ainda não lançada** (versão 4, guardada). Os dois apps recusam e não enviam nada. |
 | Textos vindos de fontes externas não são conferidos com rigor suficiente | **Corrigido no iPhone** em 16 nov. 2026 (versão 1.0 na App Store); **Android: correção escrita, ainda não lançada** (versão 4, guardada). Formato rígido de versão, conferência do número do dia. |
 | O Android atualiza em segundo plano a cada 15 minutos para todos os usuários | **Correção escrita, ainda não lançada** (versão 4 do Android, guardada): leituras em segundo plano só para assinantes. |
-| Atalhos de teste escondidos continuam nas versões de loja | **Correção escrita, ainda não lançada**: no Android, na versão 4; no iPhone, na versão 1.1 (build 15), enviada para a revisão da App Store em 16 nov. 2026. |
+| Atalhos de teste escondidos continuam nas versões de loja | **Corrigido no iPhone** na versão 1.1 (build 15), na App Store desde 16 nov. 2026; no Android, correção escrita na versão 4, ainda não lançada. |
 | Dados guardados antes de as assinaturas serem conferidas ainda poderiam aparecer depois de uma atualização (encontrado na revisão das correções) | **Corrigido no iPhone** em 16 nov. 2026 (a versão 1.0 na App Store os descarta); **Android: correção escrita, ainda não lançada** (versão 4, guardada). |
 | O site carrega fontes do Google | **Aberto**, e agora informado na política de privacidade. A página que hospeda a seção do app carrega as mesmas fontes por conta própria, então tirá-las só da seção não mudaria nada para o visitante. |
 | Textos do site: Android listado sem "em breve", um preço só para todos, dia de exemplo sem aviso | **Corrigido** em 14 nov. 2026. |
