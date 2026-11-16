@@ -17,6 +17,7 @@ The current texts are always at:
 | `2026-11-16/` | Privacy policy only: a new item 5, the live chain server (monitor6529-live.casanua.workers.dev), which the app reads only while its Chain page is open; the old item 5 becomes 6. Terms and support are unchanged. |
 | `2026-11-16b/` | Privacy policy only: item 5 now also covers the main screen (the app reads the live chain server when you open or refresh it, and every few seconds while the Chain page is open). |
 | `2026-11-16c/` | Privacy policy only: instant alerts on iPhone (optional, off by default) are described before the server that sends them is switched on: what the server keeps while the option is on, the Apple DeviceCheck proof, the brief IP use, deletion, and the short-lived "alert already sent" marks; consent as their legal basis; the retention and rights sections name this one exception. Terms and support are unchanged. |
+| `2026-11-16d/` | Privacy policy only: seven sentences that still said nothing reaches Casa NUA (the summary, the list of what the app sends, the alerts, what stays on your devices, consent, your rights, children) now carry the same instant-alerts exception; the list of what the app sends gains item 7, the alert server, used only if you switch instant alerts on. Terms and support are unchanged. |
 
 ---
 
