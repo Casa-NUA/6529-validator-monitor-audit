@@ -11,7 +11,7 @@ What each status means:
 
 Details and evidence for each fix: [audits/2026-11-14/fixes.en.md](audits/2026-11-14/fixes.en.md).
 
-**Releases:** iPhone and Apple Watch version 1.0 (build 8) is live on the App Store since 16 Nov 2026. Version 1.1 (build 15) is live on the App Store since 16 Nov 2026. Android version 4 is still held until Google finishes reviewing the first version.
+**Releases:** iPhone and Apple Watch version 1.0 (build 8) is live on the App Store since 16 Nov 2026. Version 1.1 (build 15) is live on the App Store since 16 Nov 2026. Version 1.2 (build 18) is live on the App Store since 17 Nov 2026. Android version 4 is still held until Google finishes reviewing the first version.
 
 ## Audit no. 1 (14 November 2026)
 
