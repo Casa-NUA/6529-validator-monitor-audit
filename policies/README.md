@@ -19,6 +19,7 @@ The current texts are always at:
 | `2026-11-16c/` | Privacy policy only: instant alerts on iPhone (optional, off by default) are described before the server that sends them is switched on: what the server keeps while the option is on, the Apple DeviceCheck proof, the brief IP use, deletion, and the short-lived "alert already sent" marks; consent as their legal basis; the retention and rights sections name this one exception. Terms and support are unchanged. |
 | `2026-11-16d/` | Privacy policy only: seven sentences that still said nothing reaches Casa NUA (the summary, the list of what the app sends, the alerts, what stays on your devices, consent, your rights, children) now carry the same instant-alerts exception; the list of what the app sends gains item 7, the alert server, used only if you switch instant alerts on. Terms and support are unchanged. |
 | `2026-11-18/` | Privacy policy only: instant alerts on iPhone are now on by default for Pro subscribers and can be switched off; the legal basis changes from consent to performance of the contract (LGPD art. 7, V; GDPR art. 6(1)(b)). What the server keeps is unchanged. Terms and support are unchanged. |
+| `2026-11-18b/` | Privacy policy only: item 1 now also lists Casa NUA's data server (monitor6529-data), which the app reads first, with GitHub as backup. It serves the same public signed files and keeps no record of requests. |
 
 ---
 
