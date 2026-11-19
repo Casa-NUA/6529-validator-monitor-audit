@@ -11,7 +11,7 @@ O que cada situação quer dizer:
 
 Detalhes e evidências de cada correção: [audits/2026-11-14/fixes.pt.md](audits/2026-11-14/fixes.pt.md).
 
-**Versões:** a versão 1.0 (build 8) do iPhone e do Apple Watch está na App Store desde 16 nov. 2026. A versão 1.1 (build 15) está na App Store desde 16 nov. 2026. A versão 1.2 (build 18) está na App Store desde 17 nov. 2026. A versão 4 do Android continua guardada até o Google terminar de revisar a primeira versão.
+**Versões:** a versão 1.0 (build 8) do iPhone e do Apple Watch está na App Store desde 16 nov. 2026. A versão 1.1 (build 15) está na App Store desde 16 nov. 2026. A versão 1.2 (build 18) está na App Store desde 17 nov. 2026. A versão 1.3 (build 22) está na App Store desde 19 nov. 2026. A versão 4 do Android continua guardada até o Google terminar de revisar a primeira versão.
 
 ## Auditoria nº 1 (14 de novembro de 2026)
 
